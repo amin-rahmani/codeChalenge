@@ -16,7 +16,6 @@
 //P:make a function that takes in a number
 function reverseArray(num){
     //make number a string and split that
-<<<<<<< HEAD
     return num.toString().split('').reverse().map(e => +e)
     //reverse array
     //reverse array
