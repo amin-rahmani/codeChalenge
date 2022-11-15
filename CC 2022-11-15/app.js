@@ -23,4 +23,4 @@ function doubled(arr) {
 console.log(doubled([1,2,3]),[4,6,8])
 console.log(doubled([4,5,6]),[8,10,12])
 console.log(doubled([2,22]),[4,44])
-console.log(doubled([])
+console.log(doubled([]))
