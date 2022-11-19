@@ -16,13 +16,20 @@ function removeEveryOther(arr){
     //if index number is odd,pop that shift off
     //also what do we do about 0 => it is even apparently #scam
     //return new array
-    let newArr = []
-    for(let i = 0;i<arr.length;i++){
-        if(i % 2 !== 1){
-            newArr.push(arr[i])
-        }
-        return newArr
-    } // i said let even stay and odd go lol
+
+    /* first solution
+    // let newArr = []
+    // for(let i = 0;i<arr.length;i++){
+    //     // if(i % 2 !== 1){
+    //     //     newArr.push(arr[i])
+    //     // }
+    //     // return newArr
+
+    // } // i said let even stay and odd go lol
+    */
+
+    return arr.filter((item,i) =>i % 2 ==0)
+    
 }
 
 removeEveryOther([1,2,3,4,5,6])
