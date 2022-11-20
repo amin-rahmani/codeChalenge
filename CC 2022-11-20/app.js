@@ -13,7 +13,7 @@
 // input : 2 strings with substrings separated by ,
 // output: number as a string
 
-//P: only give string of alphabet ... no number, no array will be empty,it doesn't matter if it's special character , does it care we return it with number or string ,prob nah
+//P: only give string of alphabet ... no number, no array will be empty?,it doesn't matter if it's special character , does it care we return it with number or string ,prob nah
 //R: return the maximum of the difference in the array that we can get so we need to go with for inside of for
 // Example:
 // a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
@@ -22,8 +22,23 @@
 // Bash note:
 // input : 2 strings with substrings separated by ,
 // output: number as a string
+    // function mxdiflg(a1, a2) {
+    //     let best = 0
+    //     for (const x of a1) {
+    //         for (const y of a2) {
+    //             const difference = Math.abs(x.length - y.length);
+    //             if (difference > best) best = difference;
+    //         }
+    //     }
+    //     return best
+    // }
+
+console.log(mxdiflg(["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"], ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]),13);
+
+// so the problem above is that if they give 1  or both array of empty than there can be no difference so it should return -1
+
 function mxdiflg(a1, a2) {
-    let best = 0
+    let best = -1
     for (const x of a1) {
         for (const y of a2) {
             const difference = Math.abs(x.length - y.length);
@@ -32,5 +47,3 @@ function mxdiflg(a1, a2) {
     }
     return best
 }
-
-console.log(mxdiflg(["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"], ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]),13);
