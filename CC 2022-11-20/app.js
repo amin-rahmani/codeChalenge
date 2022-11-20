@@ -37,13 +37,28 @@ console.log(mxdiflg(["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa",
 
 // so the problem above is that if they give 1  or both array of empty than there can be no difference so it should return -1
 
-function mxdiflg(a1, a2) {
-    let best = -1
-    for (const x of a1) {
-        for (const y of a2) {
-            const difference = Math.abs(x.length - y.length);
-            if (difference > best) best = difference;
-        }
-    }
-    return best
-}
+// function mxdiflg(a1, a2) {
+//     let best = -1
+//     for (const x of a1) {
+//         for (const y of a2) {
+//             const difference = Math.abs(x.length - y.length);
+//             if (difference > best) best = difference;
+//         }
+//     }
+//     return best
+// }
+
+//fast way
+
+// function mxdiflg(a1,a2){
+//     if(!a1.length || !a2.letgth) return -1;
+//     let best = 0;
+//     for(const x of a1){
+//         for(const y of a2){
+//             best = Math.max(best,Math.abs(x.length - y.length));
+//         }
+//     }
+//     return best;
+// }
+
+// const mxdiflg = (a1, a2, c) => a1.reduce((res, x) => (a2.forEach(y => (c = Math.abs(x.length - y.length)) > res ? res = c : 0), res), -1)
