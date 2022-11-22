@@ -8,12 +8,16 @@
 
 // solution({a: 1, b: '2'}) // should return "a = 1,b = 2"
 //first solution
-function solution(pairs){
-    const arr = []
-    for(const key in pairs){
-        arr.push(`${key} = ${pairs[key]}`)
-    }
-    return arr.join()
-}
+// function solution(pairs){
+//     const arr = []
+//     for(const key in pairs){
+//         arr.push(`${key} = ${pairs[key]}`)
+//     }
+//     return arr.join()
+// }
 
+// codewars solution
+function solution(pairs) {
+    return Object.entries(pairs).map(pair => pair.join(' = ')).join(',')
+}
 solution({a: 1, b: '2'})
